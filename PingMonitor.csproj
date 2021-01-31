@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37B39FC3-577A-4875-9D80-2AD1EB2B3EB4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PingMonitor</RootNamespace>
+    <AssemblyName>PingMonitor</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\T_ExceptionBLL.cs" />
+    <Compile Include="BLL\T_LogBLL.cs" />
+    <Compile Include="BLL\T_MailAddressBLL.cs" />
+    <Compile Include="BLL\T_MailConfigBLL.cs" />
+    <Compile Include="BLL\T_PingObjBLL.cs" />
+    <Compile Include="DAL\SQLHelper.cs" />
+    <Compile Include="DAL\T_ExceptionDAL.cs" />
+    <Compile Include="DAL\T_LogDAL.cs" />
+    <Compile Include="DAL\T_MailAddressDAL.cs" />
+    <Compile Include="DAL\T_MailConfigDAL.cs" />
+    <Compile Include="DAL\T_PingObjDAL.cs" />
+    <Compile Include="formAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAbout.Designer.cs">
+      <DependentUpon>formAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formAddInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAddInfo.Designer.cs">
+      <DependentUpon>formAddInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formException.Designer.cs">
+      <DependentUpon>formException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLog.Designer.cs">
+      <DependentUpon>formLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMailConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMailConfig.Designer.cs">
+      <DependentUpon>formMailConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formObj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formObj.Designer.cs">
+      <DependentUpon>formObj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSend.Designer.cs">
+      <DependentUpon>formSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\NetState.cs" />
+    <Compile Include="MODEL\T_Exception.cs" />
+    <Compile Include="MODEL\T_Log.cs" />
+    <Compile Include="MODEL\T_MailAddress.cs" />
+    <Compile Include="MODEL\T_MailConfig.cs" />
+    <Compile Include="MODEL\T_PingObj.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formAbout.resx">
+      <DependentUpon>formAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAddInfo.resx">
+      <DependentUpon>formAddInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formException.resx">
+      <DependentUpon>formException.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLog.resx">
+      <DependentUpon>formLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMailConfig.resx">
+      <DependentUpon>formMailConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formObj.resx">
+      <DependentUpon>formObj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSend.resx">
+      <DependentUpon>formSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
